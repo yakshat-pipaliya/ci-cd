@@ -20,5 +20,7 @@ jobs:
             cd ..
             cd project/ci-cd/
             git pull origin main
+            export NODE_OPTIONS="--max-old-space-size=8192"
+            npm run build
             pm2 restart ci-cd
             pm2 log ci-cd
