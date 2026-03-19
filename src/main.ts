@@ -43,5 +43,6 @@ async function bootstrap() {
     },
   });
   await app.listen(process.env.PORT ?? 2323);
+  console.log("=========================================")
 }
 bootstrap();
