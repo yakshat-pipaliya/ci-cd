@@ -5,13 +5,15 @@ import { UsersModule } from './user/user.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { AdminModule } from './admin/admin.module';
 import { AModule } from './a/a.module';
+import { BModule } from './b/b.module';
 
 @Module({
   imports: [
     MongooseModule.forRoot('mongodb://15.206.79.39:27017/CI-CD'),
     UsersModule,
     AdminModule,
-    AModule],
+    AModule,
+    BModule],
   controllers: [AppController],
   providers: [AppService],
 })
